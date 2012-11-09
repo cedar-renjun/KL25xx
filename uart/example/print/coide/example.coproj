@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G">
+  <Target name="example_Flash" isCurrent="1">
+    <Device manufacturerId="4" manufacturerName="Freescale" chipId="86" chipName="MKL25Z128VLK4" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="MKL25Z128VLK4"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UseCLib" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00020000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00003000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00001000" startValue="0x1FFFE000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="C:\CooCox\CoIDE\workspace\example_Flash\arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="E:/cox/CoX/CoX_Peripheral/CoX_Peripheral_KLx/adc/example/ADConvert/coide"/>
+        <Option name="Name" value="example_Flash"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+        <Option name="ComponentFileStoragePath" value=""/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="J-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="JTAG"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files (x86)\SEGGER\JLinkARM_V424c\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2331"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="c:/coocox/coide/flash/klxx_128_prg_no_cfg.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Target name="example_RAM" isCurrent="0">
+    <Device manufacturerId="4" manufacturerName="Freescale" chipId="86" chipName="MKL25Z128VLK4" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="MKL25Z128VLK4"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UseCLib" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="0">
+          <Memory name="IROM1" type="ReadOnly" size="0x00020000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00003000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00001000" startValue="0x1FFFE000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="E:/cox/CoX/CoX_Peripheral/CoX_Peripheral_KLx/adc/example/ADConvert/coide"/>
+        <Option name="Name" value="example_RAM"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="J-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="JTAG"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files (x86)\SEGGER\JLinkARM_V424c\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2331"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="c:/coocox/coide/flash/klxx_128_prg_no_cfg.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="LibCox/inc/xuart.h" path="../../../../libcox/xuart.h" type="1"/>
+    <File name="LibCox/src/xdma.c" path="../../../../libcox/xdma.c" type="1"/>
+    <File name="LibCox/src/xgpio.c" path="../../../../libcox/xgpio.c" type="1"/>
+    <File name="LibCox/inc/xi2c.h" path="../../../../libcox/xi2c.h" type="1"/>
+    <File name="LibCox/src/xwdt.c" path="../../../../libcox/xwdt.c" type="1"/>
+    <File name="LibCox/src/xdebug.c" path="../../../../libcox/xdebug.c" type="1"/>
+    <File name="LibCox/inc/xhw_gpio.h" path="../../../../libcox/xhw_gpio.h" type="1"/>
+    <File name="LibCox/src/xpwm.c" path="../../../../libcox/xpwm.c" type="1"/>
+    <File name="LibCox/inc/xdebug.h" path="../../../../libcox/xdebug.h" type="1"/>
+    <File name="LibCox/inc/xhw_dma.h" path="../../../../libcox/xhw_dma.h" type="1"/>
+    <File name="LibCox/inc/xhw_acmp.h" path="../../../../libcox/xhw_acmp.h" type="1"/>
+    <File name="LibCox/src/xcore.c" path="../../../../libcox/xcore.c" type="1"/>
+    <File name="LibCox/src/xspi.c" path="../../../../libcox/xspi.c" type="1"/>
+    <File name="example" path="" type="2"/>
+    <File name="LibCox/inc/xadc.h" path="../../../../libcox/xadc.h" type="1"/>
+    <File name="LibCox/inc/xhw_adc.h" path="../../../../libcox/xhw_adc.h" type="1"/>
+    <File name="LibCox/inc/xhw_uart.h" path="../../../../libcox/xhw_uart.h" type="1"/>
+    <File name="LibCox/inc/xdma.h" path="../../../../libcox/xdma.h" type="1"/>
+    <File name="LibCox/src/xacmp.c" path="../../../../libcox/xacmp.c" type="1"/>
+    <File name="LibCox/src/xi2c.c" path="../../../../libcox/xi2c.c" type="1"/>
+    <File name="LibCox/inc/xsysctl.h" path="../../../../libcox/xsysctl.h" type="1"/>
+    <File name="startcode" path="" type="2"/>
+    <File name="LibCox/inc/xhw_wdt.h" path="../../../../libcox/xhw_wdt.h" type="1"/>
+    <File name="LibCox/inc/xgpio.h" path="../../../../libcox/xgpio.h" type="1"/>
+    <File name="LibCox/inc/xhw_memmap.h" path="../../../../libcox/xhw_memmap.h" type="1"/>
+    <File name="LibCox/inc/xhw_rtc.h" path="../../../../libcox/xhw_rtc.h" type="1"/>
+    <File name="LibCox/inc/xhw_types.h" path="../../../../libcox/xhw_types.h" type="1"/>
+    <File name="example/main.c" path="../main.c" type="1"/>
+    <File name="example/uart_example.c" path="../uart_example.c" type="1"/>
+    <File name="LibCox/inc/xcore.h" path="../../../../libcox/xcore.h" type="1"/>
+    <File name="startcode/startup_coide.c" path="../../../../startup/src/startup_coide.c" type="1"/>
+    <File name="LibCox/inc/xhw_tpm.h" path="../../../../libcox/xhw_tpm.h" type="1"/>
+    <File name="LibCox/src/xadc.c" path="../../../../libcox/xadc.c" type="1"/>
+    <File name="LibCox/src/xsysctl.c" path="../../../../libcox/xsysctl.c" type="1"/>
+    <File name="LibCox/inc/xacmp.h" path="../../../../libcox/xacmp.h" type="1"/>
+    <File name="LibCox/inc/xhw_i2c.h" path="../../../../libcox/xhw_i2c.h" type="1"/>
+    <File name="LibCox/inc/xhw_nvic.h" path="../../../../libcox/xhw_nvic.h" type="1"/>
+    <File name="LibCox/inc/xhw_ints.h" path="../../../../libcox/xhw_ints.h" type="1"/>
+    <File name="LibCox/inc/xrtc.h" path="../../../../libcox/xrtc.h" type="1"/>
+    <File name="LibCox" path="" type="2"/>
+    <File name="LibCox/inc/xhw_spi.h" path="../../../../libcox/xhw_spi.h" type="1"/>
+    <File name="LibCox/inc/xspi.h" path="../../../../libcox/xspi.h" type="1"/>
+    <File name="LibCox/src" path="" type="2"/>
+    <File name="LibCox/src/xuart.c" path="../../../../libcox/xuart.c" type="1"/>
+    <File name="LibCox/inc/xpwm.h" path="../../../../libcox/xpwm.h" type="1"/>
+    <File name="LibCox/inc/xwdt.h" path="../../../../libcox/xwdt.h" type="1"/>
+    <File name="LibCox/inc/xhw_sysctl.h" path="../../../../libcox/xhw_sysctl.h" type="1"/>
+    <File name="LibCox/inc" path="" type="2"/>
+    <File name="LibCox/src/xrtc.c" path="../../../../libcox/xrtc.c" type="1"/>
+  </Files>
+</Project>
